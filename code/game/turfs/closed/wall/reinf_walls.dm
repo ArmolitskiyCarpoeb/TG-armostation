@@ -15,7 +15,7 @@
 	rad_insulation = RAD_HEAVY_INSULATION
 	///Dismantled state, related to deconstruction.
 	var/d_state = INTACT
-
+	frill_icon = 'icons/turf/walls/rmetal_frill.dmi'
 
 /turf/closed/wall/r_wall/deconstruction_hints(mob/user)
 	switch(d_state)

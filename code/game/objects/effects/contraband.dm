@@ -68,6 +68,7 @@
 		original_name = name // can't use initial because of random posters
 		name = "poster - [name]"
 		desc = "A large piece of space-resistant printed paper. [desc]"
+	AddElement(/datum/element/wall_mount)
 
 	AddComponent(/datum/component/beauty, 300)
 

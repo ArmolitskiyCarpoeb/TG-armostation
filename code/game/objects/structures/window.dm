@@ -312,9 +312,7 @@
 
 //This proc is used to update the icons of nearby windows.
 /obj/structure/window/proc/update_nearby_icons()
-	update_icon()
-	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
-		QUEUE_SMOOTH_NEIGHBORS(src)
+	update_appearance()
 
 //merges adjacent full-tile windows into one
 /obj/structure/window/update_overlays()

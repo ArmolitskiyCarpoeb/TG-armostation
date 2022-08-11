@@ -18,6 +18,7 @@
 	throwforce = 10
 	blocks_emissive = EMISSIVE_BLOCK_GENERIC
 	pass_flags_self = PASSMOB
+	base_pixel_y = 12
 
 	///when this be added to vis_contents of something it inherit something.plane, important for visualisation of mob in openspace.
 	vis_flags = VIS_INHERIT_PLANE
@@ -228,3 +229,4 @@
 
 	///Override for sound_environments. If this is set the user will always hear a specific type of reverb (Instead of the area defined reverb)
 	var/sound_environment_override = SOUND_ENVIRONMENT_NONE
+	var/image/frill_oval_mask

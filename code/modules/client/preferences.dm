@@ -40,7 +40,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	// Custom Keybindings
 	var/list/key_bindings = list()
-
+	var/frills_over_floors = TRUE
 	var/tgui_fancy = TRUE
 	var/tgui_lock = FALSE
 	var/windowflashing = TRUE
@@ -632,7 +632,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				else
 					dat += "High"
 			dat += "</a><br>"
-
+			dat += "<b>Frills over Floors:</b> <a href='?_src_=prefs;preference=frills_over_floors'>[frills_over_floors ? "Enabled" : "Disabled"]</a><br>" //MOJAVE SUN EDIT - Wallening Testmerge
 			dat += "<b>Ambient Occlusion:</b> <a href='?_src_=prefs;preference=ambientocclusion'>[ambientocclusion ? "Enabled" : "Disabled"]</a><br>"
 			dat += "<b>Fit Viewport:</b> <a href='?_src_=prefs;preference=auto_fit_viewport'>[auto_fit_viewport ? "Auto" : "Manual"]</a><br>"
 			if (CONFIG_GET(string/default_view) != CONFIG_GET(string/default_view_square))
@@ -1808,12 +1808,20 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					parallax = WRAP(parallax - 1, PARALLAX_INSANE, PARALLAX_DISABLE + 1)
 					if (parent && parent.mob && parent.mob.hud_used)
 						parent.mob.hud_used.update_parallax_pref(parent.mob)
-
+				if("frills_over_floors")
+					frills_over_floors = !frills_over_floors
+					if(length(parent?.screen))
+						var/atom/movable/screen/plane_master/frill/frill = locate(/atom/movable/screen/plane_master/frill) in parent.screen
+						frill.backdrop(parent.mob)
 				if("ambientocclusion")
 					ambientocclusion = !ambientocclusion
-					if(parent?.screen && parent.screen.len)
+					if(length(parent?.screen)) //MOJAVE SUN EDIT - Wallening Testmerge
 						var/atom/movable/screen/plane_master/game_world/PM = locate(/atom/movable/screen/plane_master/game_world) in parent.screen
 						PM.backdrop(parent.mob)
+						var/atom/movable/screen/plane_master/frill/frill = locate(/atom/movable/screen/plane_master/frill) in parent.screen //MOJAVE SUN EDIT - Wallening Testmerge
+						frill.backdrop(parent.mob) //MOJAVE SUN EDIT - Wallening Testmerge
+
+
 
 				if("auto_fit_viewport")
 					auto_fit_viewport = !auto_fit_viewport

@@ -54,7 +54,10 @@
 		mind.transfer_to(M, 1) // second argument to force key move to new mob
 	else
 		M.key = key
-
+	if(M.base_pixel_x)
+		M.pixel_x = M.base_pixel_x
+	if(M.base_pixel_y)
+		M.pixel_y = M.base_pixel_y
 	if(delete_old_mob)
 		QDEL_IN(src, 1)
 	return M

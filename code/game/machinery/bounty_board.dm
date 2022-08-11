@@ -26,7 +26,7 @@ GLOBAL_LIST_EMPTY(request_list)
 		setDir(ndir)
 		pixel_x = (dir & 3)? 0 : (dir == 4 ? -32 : 32)
 		pixel_y = (dir & 3)? (dir ==1 ? -32 : 32) : 0
-
+	AddElement(/datum/element/wall_mount)
 /obj/machinery/bounty_board/Destroy()
 	GLOB.allbountyboards -= src
 	. = ..()

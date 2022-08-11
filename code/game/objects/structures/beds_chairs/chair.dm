@@ -217,6 +217,8 @@
 	buildstackamount = 5
 	item_chair = null
 	icon_state = "officechair_dark"
+	pixel_y = 12
+	base_pixel_y = 12
 
 
 /obj/structure/chair/office/Moved()
@@ -262,6 +264,8 @@
 	desc = "It has some unsavory stains on it..."
 	icon_state = "bar"
 	item_chair = /obj/item/chair/stool/bar
+	pixel_y = 8
+	base_pixel_y = 16
 
 /obj/item/chair
 	name = "chair"

@@ -13,6 +13,7 @@
 	. = ..()
 	if(icon_state == "mirror_broke" && !broken)
 		obj_break(null, mapload)
+	AddElement(/datum/element/wall_mount)
 
 /obj/structure/mirror/attack_hand(mob/user)
 	. = ..()

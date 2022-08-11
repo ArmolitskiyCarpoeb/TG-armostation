@@ -168,7 +168,9 @@
 	w_class = WEIGHT_CLASS_GIGANTIC
 	anchored = TRUE
 	density = FALSE
-
+/obj/item/storage/secure/safe/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/wall_mount)
 /obj/item/storage/secure/safe/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)

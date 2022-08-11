@@ -61,6 +61,7 @@
 	base_icon_state = "rusty_wall"
 	smoothing_flags = SMOOTH_BITMASK
 	hardness = 45
+	frill_icon = 'icons/turf/walls/rustmetal_frill.dmi'
 
 /turf/closed/wall/rust/rust_heretic_act()
 	ScrapeAway()

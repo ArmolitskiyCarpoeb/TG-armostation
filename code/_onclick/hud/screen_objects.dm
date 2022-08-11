@@ -57,7 +57,7 @@
 
 /atom/movable/screen/swap_hand
 	layer = HUD_LAYER
-	plane = HUD_PLANE
+	//plane = HUD_PLANE
 	name = "swap hand"
 
 /atom/movable/screen/swap_hand/Click()

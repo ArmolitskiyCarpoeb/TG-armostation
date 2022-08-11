@@ -20,7 +20,9 @@
 #define GAME_PLANE_RENDER_TARGET "GAME_PLANE"
 #define BLACKNESS_PLANE 0 //To keep from conflicts with SEE_BLACKNESS internals
 #define BLACKNESS_PLANE_RENDER_TARGET "BLACKNESS_PLANE"
-
+#define WALL_PLANE -5
+#define FRILL_MASK_PLANE 95
+#define FRILL_MASK_RENDER_TARGET "*FRILL_MASK_PLANE"
 #define SPACE_LAYER 1.8
 //#define TURF_LAYER 2 //For easy recordkeeping; this is a byond define
 #define CULT_OVERLAY_LAYER 2.01
@@ -46,7 +48,7 @@
 #define LOW_SIGIL_LAYER 2.52
 #define SIGIL_LAYER 2.54
 #define HIGH_SIGIL_LAYER 2.56
-
+#define OVER_TILE_PLANE -6
 #define BELOW_OPEN_DOOR_LAYER 2.6
 #define BLASTDOOR_LAYER 2.65
 #define OPEN_DOOR_LAYER 2.7
@@ -77,7 +79,11 @@
 #define ON_EDGED_TURF_LAYER 4.35
 #define LARGE_MOB_LAYER 4.4
 #define ABOVE_ALL_MOB_LAYER 4.5
-
+#define UNDER_FRILL_PLANE -3
+#define UNDER_FRILL_RENDER_TARGET "UNDER_FRILL_PLANE"
+#define FRILL_PLANE -2
+#define FRILL_PLANE_RENDER_TARGET "FRILL_PLANE"
+#define OVER_FRILL_PLANE -1
 #define SPACEVINE_LAYER 4.8
 #define SPACEVINE_MOB_LAYER 4.9
 //#define FLY_LAYER 5 //For easy recordkeeping; this is a byond define

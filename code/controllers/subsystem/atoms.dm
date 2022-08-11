@@ -65,7 +65,7 @@ SUBSYSTEM_DEF(atoms)
 	if(late_loaders.len)
 		for(var/I in 1 to late_loaders.len)
 			var/atom/A = late_loaders[I]
-			A.LateInitialize()
+			A.LateInitialize(TRUE)
 		testing("Late initialized [late_loaders.len] atoms")
 		late_loaders.Cut()
 
@@ -95,7 +95,7 @@ SUBSYSTEM_DEF(atoms)
 				if(arguments[1])	//mapload
 					late_loaders += A
 				else
-					A.LateInitialize()
+					A.LateInitialize(FALSE)
 			if(INITIALIZE_HINT_QDEL)
 				qdel(A)
 				qdeleted = TRUE

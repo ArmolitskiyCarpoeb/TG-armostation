@@ -6,7 +6,12 @@
 	flags_1 = RAD_PROTECT_CONTENTS_1 | RAD_NO_CONTAMINATE_1
 	rad_insulation = RAD_MEDIUM_INSULATION
 	pass_flags_self = PASSCLOSEDTURF
-
+	plane = WALL_PLANE
+	var/frill_icon //MOJAVE SUN EDIT - Wallening Testmerge
+/turf/closed/Initialize(mapload)
+	. = ..()
+	if(frill_icon)
+		AddElement(/datum/element/frill, frill_icon) //MOJAVE SUN EDIT - Wallening Testmerge
 /turf/closed/AfterChange()
 	. = ..()
 	SSair.high_pressure_delta -= src
@@ -84,7 +89,7 @@
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_CLOSED_TURFS, SMOOTH_GROUP_WALLS)
 	canSmoothWith = list(SMOOTH_GROUP_WALLS)
-
+	frill_icon = 'icons/turf/walls/rmetal_frill.dmi'
 
 /turf/closed/indestructible/riveted
 	icon = 'icons/turf/walls/riveted.dmi'

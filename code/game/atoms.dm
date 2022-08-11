@@ -148,7 +148,7 @@
 	var/atom/orbit_target
 	///AI controller that controls this atom. type on init, then turned into an instance during runtime
 	var/datum/ai_controller/ai_controller
-
+	var/manual_align = FALSE
 /**
  * Called when an atom is created in byond (built in engine proc)
  *
@@ -253,7 +253,67 @@
  * that all atoms will actually exist in the "WORLD" at this time and that all their Intialization
  * code has been run
  */
-/atom/proc/LateInitialize()
+/atom/proc/update_appearance(updates=ALL)
+	SHOULD_NOT_SLEEP(TRUE)
+	SHOULD_CALL_PARENT(TRUE)
+
+	. = NONE
+	updates &= ~SEND_SIGNAL(src, COMSIG_ATOM_UPDATE_APPEARANCE, updates)
+	if(updates & UPDATE_NAME)
+		. |= _update_name(updates)
+	if(updates & UPDATE_DESC)
+		. |= _update_desc(updates)
+	if(updates & UPDATE_ICON)
+		. |= _update_icon(updates)
+/atom/proc/_update_name(updates=ALL)
+	SHOULD_CALL_PARENT(TRUE)
+	return SEND_SIGNAL(src, COMSIG_ATOM_UPDATE_NAME, updates)
+
+/// Updates the description of the atom
+/atom/proc/_update_desc(updates=ALL)
+	SHOULD_CALL_PARENT(TRUE)
+	return SEND_SIGNAL(src, COMSIG_ATOM_UPDATE_DESC, updates)
+
+/// Updates the icon of the atom
+/atom/proc/_update_icon(updates=ALL)
+	SIGNAL_HANDLER
+	SHOULD_CALL_PARENT(TRUE)
+
+	. = NONE
+	updates &= ~SEND_SIGNAL(src, COMSIG_ATOM_UPDATE_ICON, updates)
+	if(updates & UPDATE_ICON_STATE)
+		update_icon_state()
+		. |= UPDATE_ICON_STATE
+
+	if(updates & UPDATE_OVERLAYS)
+		if(LAZYLEN(managed_vis_overlays))
+			SSvis_overlays.remove_vis_overlay(src, managed_vis_overlays)
+
+		var/list/new_overlays = update_overlays(updates)
+		if(managed_overlays)
+			cut_overlay(managed_overlays)
+			managed_overlays = null
+		if(length(new_overlays))
+			if (length(new_overlays) == 1)
+				managed_overlays = new_overlays[1]
+			else
+				managed_overlays = new_overlays
+			add_overlay(new_overlays)
+		. |= UPDATE_OVERLAYS
+
+	. |= SEND_SIGNAL(src, COMSIG_ATOM_UPDATED_ICON, updates, .)
+
+/// Updates the icon state of the atom
+/atom/proc/_update_icon_state()
+	SHOULD_CALL_PARENT(TRUE)
+	return SEND_SIGNAL(src, COMSIG_ATOM_UPDATE_ICON_STATE)
+
+/// Updates the overlays of the atom
+/atom/proc/update_overlays()
+	SHOULD_CALL_PARENT(TRUE)
+	. = list()
+	SEND_SIGNAL(src, COMSIG_ATOM_UPDATE_OVERLAYS, .)
+/atom/proc/LateInitialize(mapload)
 	set waitfor = FALSE
 
 /// Put your [AddComponent] calls here
@@ -665,12 +725,6 @@
 
 /// Updates the icon state of the atom
 /atom/proc/update_icon_state()
-
-/// Updates the overlays of the atom
-/atom/proc/update_overlays()
-	SHOULD_CALL_PARENT(TRUE)
-	. = list()
-	SEND_SIGNAL(src, COMSIG_ATOM_UPDATE_OVERLAYS, .)
 
 /**
  * An atom we are buckled or is contained within us has tried to move

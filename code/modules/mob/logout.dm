@@ -14,6 +14,8 @@
 		loc.on_log(FALSE)
 
 	if(client)
+		client.images.Remove(frill_oval_mask)
+		frill_oval_mask = null
 		for(var/foo in client.player_details.post_logout_callbacks)
 			var/datum/callback/CB = foo
 			CB.Invoke()
