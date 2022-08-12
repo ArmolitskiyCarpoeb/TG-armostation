@@ -132,10 +132,3 @@
 	if(ishuman(usr))
 		var/mob/living/carbon/human/H = usr
 		H.SwitchBlocking()
-
-/client/keyUp(_key as text)
-	if(_key == "c")
-		if(ishuman(mob))
-			var/mob/living/carbon/human/HUM = mob
-			HUM.SwitchBlocking()
-	..()
