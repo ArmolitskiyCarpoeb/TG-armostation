@@ -61,9 +61,9 @@
 	name = "airlock"
 	icon = 'icons/obj/doors/airlocks/station/public.dmi'
 	icon_state = "closed"
-	max_integrity = 300
+	max_integrity = 150
 	var/normal_integrity = AIRLOCK_INTEGRITY_N
-	integrity_failure = 0.25
+	integrity_failure = 0.5
 	damage_deflection = AIRLOCK_DAMAGE_DEFLECTION_N
 	autoclose = TRUE
 	secondsElectrified = MACHINE_NOT_ELECTRIFIED //How many seconds remain until the door is no longer electrified. -1/MACHINE_ELECTRIFIED_PERMANENT = permanently electrified until someone fixes it.

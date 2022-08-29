@@ -4,10 +4,10 @@
 	icon_state = "securecrate"
 	secure = TRUE
 	locked = TRUE
-	max_integrity = 500
-	armor = list(MELEE = 30, BULLET = 50, LASER = 50, ENERGY = 100, BOMB = 0, BIO = 0, RAD = 0, FIRE = 80, ACID = 80)
+	max_integrity = 250
+	armor = list(MELEE = 15, BULLET = 25, LASER = 25, ENERGY = 80, BOMB = 0, BIO = 0, RAD = 0, FIRE = 80, ACID = 80)
 	var/tamperproof = 0
-	damage_deflection = 25
+	damage_deflection = 10
 
 /obj/structure/closet/crate/secure/update_overlays()
 	. = ..()
