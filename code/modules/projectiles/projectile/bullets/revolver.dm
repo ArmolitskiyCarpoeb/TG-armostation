@@ -2,19 +2,19 @@
 
 /obj/projectile/bullet/n762
 	name = "7.62x38mmR bullet"
-	damage = 60
+	damage = 63
 
 // .50AE (Desert Eagle)
 
 /obj/projectile/bullet/a50ae
 	name = ".50AE bullet"
-	damage = 60
+	damage = 64
 
 // .38 (Detective's Gun)
 
 /obj/projectile/bullet/c38
 	name = ".38 bullet"
-	damage = 25
+	damage = 32
 	ricochets_max = 2
 	ricochet_chance = 50
 	ricochet_auto_aim_angle = 10
@@ -35,8 +35,8 @@
 
 /obj/projectile/bullet/c38/match/bouncy
 	name = ".38 Rubber bullet"
-	damage = 10
-	stamina = 30
+	damage = 12
+	stamina = 45
 	armour_penetration = -30
 	ricochets_max = 6
 	ricochet_incidence_leeway = 0
@@ -49,7 +49,7 @@
 // premium .38 ammo from cargo, weak against armor, lower base damage, but excellent at embedding and causing slice wounds at close range
 /obj/projectile/bullet/c38/dumdum
 	name = ".38 DumDum bullet"
-	damage = 15
+	damage = 20
 	armour_penetration = -30
 	ricochets_max = 0
 	sharpness = SHARP_EDGED
@@ -79,7 +79,7 @@
 
 /obj/projectile/bullet/c38/hotshot //similar to incendiary bullets, but do not leave a flaming trail
 	name = ".38 Hot Shot bullet"
-	damage = 20
+	damage = 25
 	ricochets_max = 0
 
 /obj/projectile/bullet/c38/hotshot/on_hit(atom/target, blocked = FALSE)
@@ -91,7 +91,7 @@
 
 /obj/projectile/bullet/c38/iceblox //see /obj/projectile/temp for the original code
 	name = ".38 Iceblox bullet"
-	damage = 20
+	damage = 22
 	var/temperature = 100
 	ricochets_max = 0
 
@@ -105,7 +105,7 @@
 
 /obj/projectile/bullet/a357
 	name = ".357 bullet"
-	damage = 60
+	damage = 64
 	wound_bonus = -70
 
 // admin only really, for ocelot memes

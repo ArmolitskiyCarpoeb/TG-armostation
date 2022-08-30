@@ -5,9 +5,9 @@
 	icon_state = "generic"
 	density = TRUE
 	drag_slowdown = 1.5		// Same as a prone mob
-	max_integrity = 200
+	max_integrity = 140
 	integrity_failure = 0.25
-	armor = list(MELEE = 20, BULLET = 10, LASER = 10, ENERGY = 0, BOMB = 10, BIO = 0, RAD = 0, FIRE = 70, ACID = 60)
+	armor = list(MELEE = 15, BULLET = 7, LASER = 7, ENERGY = 0, BOMB = 10, BIO = 0, RAD = 0, FIRE = 70, ACID = 60)
 
 	var/icon_door = null
 	var/icon_door_override = FALSE //override to have open overlay use icon different to its base's

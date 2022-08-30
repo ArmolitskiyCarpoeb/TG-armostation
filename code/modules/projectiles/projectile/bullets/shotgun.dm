@@ -1,6 +1,6 @@
 /obj/projectile/bullet/shotgun_slug
 	name = "12g shotgun slug"
-	damage = 50
+	damage = 65
 	sharpness = SHARP_POINTY
 	wound_bonus = 0
 
@@ -17,14 +17,14 @@
 /obj/projectile/bullet/shotgun_beanbag
 	name = "beanbag slug"
 	damage = 10
-	stamina = 55
+	stamina = 60
 	wound_bonus = 20
 	sharpness = SHARP_NONE
 	embedding = null
 
 /obj/projectile/bullet/incendiary/shotgun
 	name = "incendiary slug"
-	damage = 20
+	damage = 23
 
 /obj/projectile/bullet/incendiary/shotgun/dragonsbreath
 	name = "dragonsbreath pellet"
@@ -77,10 +77,10 @@
 
 /obj/projectile/bullet/pellet/shotgun_buckshot
 	name = "buckshot pellet"
-	damage = 7.5
+	damage = 9
 	wound_bonus = 5
 	bare_wound_bonus = 5
-	wound_falloff_tile = -2.5 // low damage + additional dropoff will already curb wounding potential anything past point blank
+	wound_falloff_tile = -1.5 // low damage + additional dropoff will already curb wounding potential anything past point blank
 
 /obj/projectile/bullet/pellet/shotgun_rubbershot
 	name = "rubbershot pellet"

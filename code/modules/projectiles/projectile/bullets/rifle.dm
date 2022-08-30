@@ -2,14 +2,14 @@
 
 /obj/projectile/bullet/a556
 	name = "5.56mm bullet"
-	damage = 35
+	damage = 42
 	armour_penetration = 30
 	wound_bonus = -40
 
 /obj/projectile/bullet/a556/phasic
 	name = "5.56mm phasic bullet"
 	icon_state = "gaussphase"
-	damage = 20
+	damage = 25
 	armour_penetration = 70
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE | PASSCLOSEDTURF | PASSMACHINE | PASSSTRUCTURE
 
@@ -17,8 +17,8 @@
 
 /obj/projectile/bullet/a762
 	name = "7.62 bullet"
-	damage = 60
-	armour_penetration = 10
+	damage = 67
+	armour_penetration = 20
 	wound_bonus = -45
 	wound_falloff_tile = 0
 
@@ -32,7 +32,7 @@
 /obj/projectile/bullet/harpoon
 	name = "harpoon"
 	icon_state = "gauss"
-	damage = 60
+	damage = 65
 	armour_penetration = 50
 	wound_bonus = -20
 	bare_wound_bonus = 80

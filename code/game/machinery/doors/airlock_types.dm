@@ -5,12 +5,12 @@
 /obj/machinery/door/airlock/command
 	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_com
-	normal_integrity = 450
+	normal_integrity = 230
 
 /obj/machinery/door/airlock/security
 	icon = 'icons/obj/doors/airlocks/station/security.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_sec
-	normal_integrity = 450
+	normal_integrity = 175
 
 /obj/machinery/door/airlock/engineering
 	icon = 'icons/obj/doors/airlocks/station/engineering.dmi'
@@ -24,7 +24,7 @@
 	name = "maintenance access"
 	icon = 'icons/obj/doors/airlocks/station/maintenance.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_mai
-	normal_integrity = 250
+	normal_integrity = 150
 
 /obj/machinery/door/airlock/maintenance/external
 	name = "external airlock access"
@@ -84,7 +84,7 @@
 /obj/machinery/door/airlock/command/glass
 	opacity = FALSE
 	glass = TRUE
-	normal_integrity = 400
+	normal_integrity = 200
 
 /obj/machinery/door/airlock/engineering/glass
 	opacity = FALSE
@@ -96,7 +96,7 @@
 /obj/machinery/door/airlock/security/glass
 	opacity = FALSE
 	glass = TRUE
-	normal_integrity = 400
+	normal_integrity = 150
 
 /obj/machinery/door/airlock/medical/glass
 	opacity = FALSE
@@ -146,7 +146,7 @@
 /obj/machinery/door/airlock/maintenance/external/glass
 	opacity = FALSE
 	glass = TRUE
-	normal_integrity = 200
+	normal_integrity = 180
 
 //////////////////////////////////
 /*

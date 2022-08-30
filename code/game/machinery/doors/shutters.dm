@@ -5,9 +5,9 @@
 	icon = 'icons/obj/doors/shutters.dmi'
 	layer = SHUTTER_LAYER
 	closingLayer = SHUTTER_LAYER
-	damage_deflection = 20
-	armor = list("melee" = 20, "bullet" = 20, "laser" = 20, "energy" = 75, "bomb" = 25, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 70)
-	max_integrity = 100
+	damage_deflection = 15
+	armor = list("melee" = 15, "bullet" = 15, "laser" = 15, "energy" = 75, "bomb" = 25, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 70)
+	max_integrity = 70
 
 /obj/machinery/door/poddoor/shutters/preopen
 	icon_state = "open"
