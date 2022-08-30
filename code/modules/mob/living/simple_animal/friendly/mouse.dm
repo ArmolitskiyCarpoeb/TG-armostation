@@ -32,6 +32,17 @@
 	held_state = "mouse_gray"
 	faction = list("rat")
 
+	harm_intent_damage = 1
+	obj_damage = 1
+	melee_damage_type = BRUTE
+	sharpness = SHARP_EDGED
+	attack_verb_continuous = "bites"
+	attack_verb_simple = "bite"
+	attack_sound = 'sound/weapons/bite.ogg'
+	speak_emote = list("gnashes")
+	a_intent = INTENT_HARM
+	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
+
 /mob/living/simple_animal/mouse/Initialize()
 	. = ..()
 	AddComponent(/datum/component/squeak, list('sound/effects/mousesqueek.ogg'=1), 100, extrarange = SHORT_RANGE_SOUND_EXTRARANGE) //as quiet as a mouse or whatever
