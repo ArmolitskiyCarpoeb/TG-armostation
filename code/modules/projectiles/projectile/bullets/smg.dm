@@ -2,7 +2,7 @@
 
 /obj/projectile/bullet/c45
 	name = ".45 bullet"
-	damage = 33
+	damage = 35
 	wound_bonus = -10
 	wound_falloff_tile = -10
 
@@ -20,7 +20,7 @@
 
 /obj/projectile/bullet/c46x30mm
 	name = "4.6x30mm bullet"
-	damage = 27
+	damage = 30
 	wound_bonus = -5
 	bare_wound_bonus = 5
 	embed_falloff_tile = -4
@@ -40,4 +40,4 @@
 
 /obj/projectile/bullet/c9x19mm
 	name = "9x19mm bullet"
-	damage = 20
+	damage = 25

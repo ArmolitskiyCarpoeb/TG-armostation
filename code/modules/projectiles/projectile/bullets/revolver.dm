@@ -2,19 +2,19 @@
 
 /obj/projectile/bullet/n762
 	name = "7.62x38mmR bullet"
-	damage = 62
+	damage = 63
 
 // .50AE (Desert Eagle)
 
 /obj/projectile/bullet/a50ae
 	name = ".50AE bullet"
-	damage = 63
+	damage = 64
 
 // .38 (Detective's Gun)
 
 /obj/projectile/bullet/c38
 	name = ".38 bullet"
-	damage = 30
+	damage = 32
 	ricochets_max = 2
 	ricochet_chance = 50
 	ricochet_auto_aim_angle = 10
@@ -105,7 +105,7 @@
 
 /obj/projectile/bullet/a357
 	name = ".357 bullet"
-	damage = 63
+	damage = 64
 	wound_bonus = -70
 
 // admin only really, for ocelot memes

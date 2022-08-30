@@ -2,7 +2,7 @@
 
 /obj/projectile/bullet/a556
 	name = "5.56mm bullet"
-	damage = 40
+	damage = 42
 	armour_penetration = 30
 	wound_bonus = -40
 
@@ -17,7 +17,7 @@
 
 /obj/projectile/bullet/a762
 	name = "7.62 bullet"
-	damage = 65
+	damage = 67
 	armour_penetration = 20
 	wound_bonus = -45
 	wound_falloff_tile = 0
