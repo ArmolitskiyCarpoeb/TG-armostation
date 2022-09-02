@@ -46,7 +46,7 @@
 #define AIRLOCK_SECURITY_PLASTEEL_O		5 								//There is first layer of plasteel (use welder)
 #define AIRLOCK_SECURITY_PLASTEEL		6 //Max security airlock		//Fully secured wires (use wirecutters to remove grille, that is electrified)
 
-#define AIRLOCK_INTEGRITY_N			 150 // Normal airlock integrity
+#define AIRLOCK_INTEGRITY_N			 200 // Normal airlock integrity
 #define AIRLOCK_INTEGRITY_MULTIPLIER 1.5 // How much reinforced doors health increases
 /// How much extra health airlocks get when braced with a seal
 #define AIRLOCK_SEAL_MULTIPLIER		 2
@@ -61,7 +61,7 @@
 	name = "airlock"
 	icon = 'icons/obj/doors/airlocks/station/public.dmi'
 	icon_state = "closed"
-	max_integrity = 150
+	max_integrity = 200
 	var/normal_integrity = AIRLOCK_INTEGRITY_N
 	integrity_failure = 0.5
 	damage_deflection = AIRLOCK_DAMAGE_DEFLECTION_N
