@@ -7,9 +7,9 @@
 	hitsound = 'sound/weapons/smash.ogg'
 	flags_1 = CONDUCT_1
 	throwforce = 10
-	w_class = WEIGHT_CLASS_NORMAL
+	w_class = WEIGHT_CLASS_BULKY
 	throw_speed = 2
-	throw_range = 7
+	throw_range = 6
 	force = 10
 	custom_materials = list(/datum/material/iron = 90)
 	attack_verb_continuous = list("slams", "whacks", "bashes", "thunks", "batters", "bludgeons", "thrashes")
