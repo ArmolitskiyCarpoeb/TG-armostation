@@ -1,3 +1,14 @@
+GLOBAL_LIST_INIT(fight_ambience,list(
+	'sound/ambience/spacemonkeys/fc1.ogg', 'sound/ambience/spacemonkeys/fc2.ogg',
+	'sound/ambience/spacemonkeys/fc3.ogg', 'sound/ambience/spacemonkeys/fc4.ogg',
+	'sound/ambience/spacemonkeys/fc5.ogg', 'sound/ambience/spacemonkeys/fc6.ogg',
+	'sound/ambience/spacemonkeys/fc7.ogg', 'sound/ambience/spacemonkeys/fc8.ogg',
+	'sound/ambience/spacemonkeys/fc9.ogg', 'sound/ambience/spacemonkeys/fc10.ogg',
+	'sound/ambience/spacemonkeys/fc11.ogg', 'sound/ambience/spacemonkeys/fc12.ogg',
+	'sound/ambience/spacemonkeys/fc13.ogg', 'sound/ambience/spacemonkeys/fc14.ogg',
+	'sound/ambience/spacemonkeys/fc15.ogg', 'sound/ambience/spacemonkeys/fc16.ogg',
+	'sound/ambience/spacemonkeys/fc17.ogg'))
+
 GLOBAL_LIST_INIT(generic_ambience,list(
 	'sound/ambience/ambigen1.ogg', 'sound/ambience/ambigen3.ogg',
 	'sound/ambience/ambigen4.ogg', 'sound/ambience/ambigen5.ogg',
@@ -39,7 +50,7 @@ GLOBAL_LIST_INIT(mining_ambience,list(
 	'sound/ambience/ambiruin5.ogg', 'sound/ambience/ambiruin6.ogg',
 	'sound/ambience/ambiruin7.ogg', 'sound/ambience/ambidanger.ogg',
 	'sound/ambience/ambidanger2.ogg', 'sound/ambience/ambimaint1.ogg',
-	'sound/ambience/ambilava1.ogg', 'sound/ambience/ambilava2.ogg', 
+	'sound/ambience/ambilava1.ogg', 'sound/ambience/ambilava2.ogg',
 	'sound/ambience/ambilava3.ogg'))
 
 GLOBAL_LIST_INIT(medical_ambience,list('sound/ambience/ambinice.ogg'))
@@ -87,16 +98,17 @@ GLOBAL_LIST_INIT(creepy_ambience,list(
 	'sound/hallucinations/wail.ogg'))
 
 GLOBAL_LIST_INIT(ambience_assoc,list(
-	AMBIENCE_GENERIC = GLOB.generic_ambience,
+	AMBIENCE_GENERIC = GLOB.fight_ambience,
 	AMBIENCE_HOLY = GLOB.holy_ambience,
 	AMBIENCE_DANGER = GLOB.danger_ambience,
 	AMBIENCE_RUINS = GLOB.ruins_ambience,
-	AMBIENCE_ENGI = GLOB.engi_ambience,
-	AMBIENCE_MINING = GLOB.mining_ambience,
-	AMBIENCE_MEDICAL = GLOB.medical_ambience,
+	AMBIENCE_ENGI = GLOB.fight_ambience,
+	AMBIENCE_MINING = GLOB.fight_ambience,
+	AMBIENCE_MEDICAL = GLOB.fight_ambience,
 	AMBIENCE_SPOOKY = GLOB.spooky_ambience,
-	AMBIENCE_SPACE = GLOB.space_ambience,
-	AMBIENCE_MAINT = GLOB.maint_ambience,
-	AMBIENCE_AWAY = GLOB.away_ambience,
+	AMBIENCE_SPACE = GLOB.fight_ambience,
+	AMBIENCE_MAINT = GLOB.fight_ambience,
+	AMBIENCE_AWAY = GLOB.fight_ambience,
 	AMBIENCE_REEBE = GLOB.reebe_ambience,
-	AMBIENCE_CREEPY = GLOB.creepy_ambience))
+	AMBIENCE_CREEPY = GLOB.creepy_ambience,
+	AMBIENCE_FIGHT_CLUB = GLOB.fight_ambience))
