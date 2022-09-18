@@ -4,12 +4,23 @@
 	sharpness = SHARP_POINTY
 	wound_bonus = 0
 
+/mob/living
+	var/last_ueban = 0
+
+/mob/living/proc/ueban()
+	if(last_ueban <= world.time+50)
+		last_ueban = world.time
+		return TRUE
+	else
+		return FALSE
+
 /obj/projectile/bullet/shotgun_slug/on_hit(atom/target, blocked = FALSE)
 	. = ..()
 	if(isliving(target))
 		var/mob/living/M = target
 		var/atom/throw_target = get_edge_target_turf(M, get_dir(src, get_step_away(M, src)))
-		M.throw_at(throw_target, rand(1, 2), 4)
+		if(M.body_position == STANDING_UP && !M.ueban())
+			M.throw_at(throw_target, 1, 2)
 
 /obj/projectile/bullet/shotgun_slug/executioner
 	name = "executioner slug" // admin only, can dismember limbs
@@ -94,7 +105,8 @@
 	if(isliving(target) && range >= initial(range)-2)
 		var/mob/living/M = target
 		var/atom/throw_target = get_edge_target_turf(M, get_dir(src, get_step_away(M, src)))
-		M.throw_at(throw_target, rand(1, 2), 4)
+		if(M.body_position == STANDING_UP)
+			M.throw_at(throw_target, 1, 2)
 
 /obj/projectile/bullet/pellet/shotgun_rubbershot
 	name = "rubbershot pellet"
