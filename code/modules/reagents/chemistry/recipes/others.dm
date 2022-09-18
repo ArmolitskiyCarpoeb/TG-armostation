@@ -27,6 +27,10 @@
 	results = list(/datum/reagent/glycerol = 1)
 	required_reagents = list(/datum/reagent/consumable/cornoil = 3, /datum/reagent/toxin/acid = 1)
 
+/datum/chemical_reaction/glycerol_alt
+	results = list(/datum/reagent/glycerol = 1)
+	required_reagents = list(/datum/reagent/liquidgibs = 3, /datum/reagent/toxin/acid = 1)
+
 /datum/chemical_reaction/sodiumchloride
 	results = list(/datum/reagent/consumable/salt = 3)
 	required_reagents = list(/datum/reagent/water = 1, /datum/reagent/sodium = 1, /datum/reagent/chlorine = 1)

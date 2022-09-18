@@ -28,8 +28,8 @@
 
 /datum/chemical_reaction/reagent_explosion/nitroglycerin
 	results = list(/datum/reagent/nitroglycerin = 2)
-	required_reagents = list(/datum/reagent/glycerol = 1, /datum/reagent/toxin/acid/nitracid = 1, /datum/reagent/toxin/acid = 1)
-	strengthdiv = 2
+	required_reagents = list(/datum/reagent/glycerol = 1, /datum/reagent/toxin/acid/nitracid = 1)
+	strengthdiv = 6
 
 /datum/chemical_reaction/reagent_explosion/nitroglycerin/on_reaction(datum/reagents/holder, created_volume)
 
@@ -41,7 +41,7 @@
 /datum/chemical_reaction/reagent_explosion/nitroglycerin_explosion
 	required_reagents = list(/datum/reagent/nitroglycerin = 1)
 	required_temp = 474
-	strengthdiv = 2
+	strengthdiv = 6
 
 /datum/chemical_reaction/reagent_explosion/rdx
 	results = list(/datum/reagent/rdx= 2)
