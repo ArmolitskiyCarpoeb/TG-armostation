@@ -43,3 +43,23 @@
 	price_max = 400
 	stock_max = 2
 	availability_prob = 50
+
+/datum/blackmarket_item/weapon/e_gun
+	name = "Energy Gun"
+	desc = "A basic hybrid energy gun with two settings: disable and kill."
+	item = /obj/item/gun/energy/e_gun
+
+	price_min = 1000
+	price_max = 3000
+	stock_max = 3
+	availability_prob = 50
+
+/datum/blackmarket_item/weapon/revolver
+	name = ".357 revolver"
+	desc = "A suspicious revolver. Uses .357 ammo."
+	item = /obj/item/gun/ballistic/revolver
+
+	price_min = 500
+	price_max = 4000
+	stock_max = 3
+	availability_prob = 50

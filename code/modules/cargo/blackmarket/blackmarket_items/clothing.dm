@@ -68,3 +68,13 @@
 	price_max = 7000
 	stock_max = 1
 	availability_prob = 10
+
+/datum/blackmarket_item/clothing/bulletproof_armor
+	name = "Bulletproof Armor"
+	desc = "BA Type III heavy bulletproof vest that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent."
+	item = /obj/item/clothing/suit/armor/bulletproof
+
+	price_min = 3000
+	price_max = 6000
+	stock_max = 3
+	availability_prob = 70
