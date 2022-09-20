@@ -39,7 +39,7 @@
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
 	attack_sound = 'sound/weapons/bite.ogg'
-	speak_emote = list("gnashes")
+	speak_emote = list("bites")
 	a_intent = INTENT_HARM
 	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
 
