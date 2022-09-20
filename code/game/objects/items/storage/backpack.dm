@@ -19,7 +19,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK	//ERROOOOO
 	resistance_flags = NONE
-	max_integrity = 300
+	max_integrity = 200
 
 /obj/item/storage/backpack/ComponentInitialize()
 	. = ..()
@@ -348,6 +348,7 @@
 /obj/item/storage/backpack/duffelbag/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_w_class = WEIGHT_CLASS_BULKY
 	STR.max_combined_w_class = 30
 
 /obj/item/storage/backpack/duffelbag/cursed
@@ -363,7 +364,7 @@
 
 /obj/item/storage/backpack/duffelbag/cursed/examine(mob/user)
 	. = ..()
-	
+
 	if(hunger > 25)
 		. += "<span class='danger'>The bag is growling for food...</span>"
 
