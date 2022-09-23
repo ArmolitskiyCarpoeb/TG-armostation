@@ -6,3 +6,5 @@
 
 BadTeammate = Host
 Armolitskiy = Host
+teodord = Moderator
+Evolet = Game Master
