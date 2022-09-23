@@ -3,7 +3,7 @@
 	desc = "Didn't make sense not to live for fun, your brain gets smart but your head gets dumb."
 	icon = 'icons/mob/human_parts.dmi'
 	icon_state = "default_human_head"
-	max_damage = 20
+	max_damage = 125
 	body_zone = BODY_ZONE_HEAD
 	body_part = HEAD
 	w_class = WEIGHT_CLASS_BULKY //Quite a hefty load
@@ -12,9 +12,8 @@
 	px_x = 0
 	px_y = -8
 	stam_damage_coeff = 1
-	max_stamina_damage = 90
-	wound_resistance = 3
-	disabled_wound_penalty = 25
+	max_stamina_damage = 100
+	wound_resistance = 2
 	scars_covered_by_clothes = FALSE
 
 	var/mob/living/brain/brainmob = null //The current occupant.

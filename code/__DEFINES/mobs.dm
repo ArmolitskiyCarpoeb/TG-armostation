@@ -68,7 +68,7 @@
 /*see __DEFINES/inventory.dm for bodypart bitflag defines*/
 
 // Health/damage defines
-#define MAX_LIVING_HEALTH 100
+#define MAX_LIVING_HEALTH 90
 
 #define HUMAN_MAX_OXYLOSS 3
 #define HUMAN_CRIT_MAX_OXYLOSS (SSmobs.wait/30)
@@ -93,9 +93,9 @@
 #define COLD_GAS_DAMAGE_LEVEL_3 3 //Amount of damage applied when the current breath's temperature passes the 120K point
 
 //Brain Damage defines
-#define BRAIN_DAMAGE_MILD 15
-#define BRAIN_DAMAGE_SEVERE 50
-#define BRAIN_DAMAGE_DEATH 80
+#define BRAIN_DAMAGE_MILD 10
+#define BRAIN_DAMAGE_SEVERE 25
+#define BRAIN_DAMAGE_DEATH 50
 
 #define BRAIN_TRAUMA_MILD /datum/brain_trauma/mild
 #define BRAIN_TRAUMA_SEVERE /datum/brain_trauma/severe

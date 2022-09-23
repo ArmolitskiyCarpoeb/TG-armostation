@@ -170,7 +170,7 @@ ALLOW_ADMIN_OOCCOLOR
 ALLOW_ADMIN_ASAYCOLOR
 
 ## Job slot open/close by identification consoles delay in seconds
-ID_CONSOLE_JOBSLOT_DELAY 30
+ID_CONSOLE_JOBSLOT_DELAY 5
 
 ## allow players to initiate a restart vote
 #ALLOW_VOTE_RESTART
@@ -197,7 +197,7 @@ VOTE_PERIOD 600
 NORESPAWN
 
 ## set a hosted by name for unix platforms
-HOSTEDBY Yournamehere
+HOSTEDBY ARMOLITSKIY
 
 ## Uncomment this to stop people connecting to your server without a registered ckey. (i.e. guest-* are all blocked from connecting)
 GUEST_BAN
@@ -237,7 +237,7 @@ CHECK_RANDOMIZER
 # FORUMURL http://tgstation13.org/phpBB/index.php
 
 ## Wiki address
-# WIKIURL http://www.tgstation13.org/wiki
+WIKIURL http://www.tgstation13.org/wiki
 
 ## Rules address
 # RULESURL http://www.tgstation13.org/wiki/Rules
