@@ -32,7 +32,7 @@
 	held_state = "mouse_gray"
 	faction = list("rat")
 
-	harm_intent_damage = 1
+	harm_intent_damage = 2
 	obj_damage = 1
 	melee_damage_type = BRUTE
 	sharpness = SHARP_EDGED

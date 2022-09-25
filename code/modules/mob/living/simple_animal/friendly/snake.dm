@@ -39,6 +39,17 @@
 	obj_damage = 0
 	environment_smash = ENVIRONMENT_SMASH_NONE
 
+	harm_intent_damage = 2
+	obj_damage = 1
+	melee_damage_type = BRUTE
+	sharpness = SHARP_EDGED
+	attack_verb_continuous = "bites"
+	attack_verb_simple = "bite"
+	attack_sound = 'sound/weapons/bite.ogg'
+	speak_emote = list("bites")
+	a_intent = INTENT_HARM
+	possible_a_intents = list(INTENT_HELP, INTENT_HARM)
+
 /mob/living/simple_animal/hostile/retaliate/poison/snake/Initialize()
 	. = ..()
 	add_cell_sample()
