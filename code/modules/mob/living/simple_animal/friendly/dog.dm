@@ -22,8 +22,10 @@
 	var/turns_since_scan = 0
 	var/obj/movement_target
 
-	harm_intent_damage = 5
-	obj_damage = 1
+	harm_intent_damage = 2
+	melee_damage_lower = 2
+	melee_damage_upper = 4
+	obj_damage = 2
 	melee_damage_type = BRUTE
 	sharpness = SHARP_EDGED
 	attack_verb_continuous = "bites"

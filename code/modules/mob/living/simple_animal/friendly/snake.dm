@@ -40,6 +40,8 @@
 	environment_smash = ENVIRONMENT_SMASH_NONE
 
 	harm_intent_damage = 2
+	melee_damage_lower = 1
+	melee_damage_upper = 2
 	obj_damage = 1
 	melee_damage_type = BRUTE
 	sharpness = SHARP_EDGED
