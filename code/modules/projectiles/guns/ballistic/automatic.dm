@@ -12,6 +12,8 @@
 	suppressed_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
 	var/select = 1 ///fire selector position. 1 = semi, 2 = burst. anything past that can vary between guns.
 	var/selector_switch_icon = FALSE ///if it has an icon for a selector switch indicating current firemode.
+	recoil = 0.7
+	spread = 10
 
 /obj/item/gun/ballistic/automatic/proto
 	name = "\improper Nanotrasen Saber SMG"
@@ -24,6 +26,8 @@
 	pin = null
 	bolt_type = BOLT_TYPE_LOCKING
 	show_bolt_icon = FALSE
+	recoil = 0.6
+	spread = 10
 
 /obj/item/gun/ballistic/automatic/proto/unrestricted
 	pin = /obj/item/firing_pin
@@ -77,6 +81,8 @@
 	mag_display = TRUE
 	mag_display_ammo = TRUE
 	empty_indicator = TRUE
+	recoil = 0.7
+	spread = 14
 
 /obj/item/gun/ballistic/automatic/c20r/update_overlays()
 	. = ..()
@@ -107,6 +113,8 @@
 	mag_display = TRUE
 	mag_display_ammo = TRUE
 	empty_indicator = TRUE
+	recoil = 0.4
+	spread = 9
 
 /obj/item/gun/ballistic/automatic/plastikov
 	name = "\improper PP-95 SMG"
@@ -115,7 +123,8 @@
 	inhand_icon_state = "plastikov"
 	mag_type = /obj/item/ammo_box/magazine/plastikov9mm
 	burst_size = 5
-	spread = 25
+	recoil = 0.8
+	spread = 22
 	can_suppress = FALSE
 	actions_types = list()
 	mag_display = TRUE
@@ -128,6 +137,8 @@
 	icon_state = "miniuzi"
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	burst_size = 2
+	recoil = 0.7
+	spread = 16
 	bolt_type = BOLT_TYPE_OPEN
 	show_bolt_icon = FALSE
 	mag_display = TRUE
@@ -145,7 +156,8 @@
 	var/obj/item/gun/ballistic/revolver/grenadelauncher/underbarrel
 	burst_size = 3
 	fire_delay = 2
-	spread = 5
+	recoil = 0.5
+	spread = 13
 	pin = /obj/item/firing_pin/implant/pindicate
 	mag_display = TRUE
 	empty_indicator = TRUE
@@ -220,6 +232,8 @@
 	can_suppress = FALSE
 	burst_size = 4
 	fire_delay = 1
+	recoil = 0.9
+	spread = 12
 	bolt_type = BOLT_TYPE_OPEN
 	empty_indicator = TRUE
 	show_bolt_icon = FALSE
@@ -234,6 +248,8 @@
 	can_suppress = FALSE
 	burst_size = 3
 	fire_delay = 1
+	recoil = 1
+	spread = 10
 
 
 // L6 SAW //
@@ -251,7 +267,8 @@
 	can_suppress = FALSE
 	burst_size = 3
 	fire_delay = 1
-	spread = 7
+	recoil = 1.2
+	spread = 15
 	pin = /obj/item/firing_pin/implant/pindicate
 	bolt_type = BOLT_TYPE_OPEN
 	show_bolt_icon = FALSE
@@ -365,6 +382,7 @@
 	weapon_weight = WEAPON_HEAVY
 	mag_type = /obj/item/ammo_box/magazine/m10mm/rifle
 	fire_delay = 30
+	recoil = 1
 	burst_size = 1
 	can_unsuppress = TRUE
 	can_suppress = TRUE

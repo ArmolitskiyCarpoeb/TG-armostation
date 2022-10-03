@@ -11,6 +11,8 @@
 	slot_flags = ITEM_SLOT_BACK
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pulse, /obj/item/ammo_casing/energy/electrode, /obj/item/ammo_casing/energy/laser)
 	cell_type = "/obj/item/stock_parts/cell/pulse"
+	recoil = 0.2
+	spread = 3
 
 /obj/item/gun/energy/pulse/emp_act(severity)
 	return

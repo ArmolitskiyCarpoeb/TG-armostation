@@ -16,6 +16,7 @@
 	rack_sound = 'sound/weapons/gun/rifle/bolt_out.ogg'
 	bolt_drop_sound = 'sound/weapons/gun/rifle/bolt_in.ogg'
 	tac_reloads = FALSE
+	recoil = 1
 
 /obj/item/gun/ballistic/rifle/update_overlays()
 	. = ..()
@@ -68,6 +69,7 @@
 	var/jamming_increment = 5
 	var/jammed = FALSE
 	var/can_jam = TRUE
+	recoil = 1
 
 /obj/item/gun/ballistic/rifle/boltaction/sawoff(mob/user)
 	. = ..()

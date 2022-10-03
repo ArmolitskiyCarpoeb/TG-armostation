@@ -25,6 +25,7 @@
 	cartridge_wording = "shell"
 	tac_reloads = FALSE
 	weapon_weight = WEAPON_HEAVY
+	recoil = 1.1
 
 	pb_knockback = 2
 

@@ -23,6 +23,8 @@
 	fire_sound_volume = 90
 	bolt_wording = "slide"
 	suppressor_x_offset = 4
+	recoil = 0.3
+	spread = 7
 
 /obj/item/gun/ballistic/automatic/pistol/no_mag
 	spawnwithmagazine = FALSE
@@ -43,6 +45,8 @@
 	rack_sound = 'sound/weapons/gun/pistol/rack.ogg'
 	lock_back_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
 	bolt_drop_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'
+	recoil = 0.8
+	spread = 9
 
 /obj/item/gun/ballistic/automatic/pistol/m1911/no_mag
 	spawnwithmagazine = FALSE
@@ -59,6 +63,8 @@
 	rack_sound = 'sound/weapons/gun/pistol/rack.ogg'
 	lock_back_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
 	bolt_drop_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'
+	recoil = 1.7
+	spread = 12
 
 /obj/item/gun/ballistic/automatic/pistol/deagle/gold
 	desc = "A gold plated Desert Eagle folded over a million times by superior martian gunsmiths. Uses .50 AE ammo."
@@ -79,7 +85,8 @@
 	can_suppress = TRUE
 	burst_size = 3
 	fire_delay = 1
-	spread = 10
+	recoil = 0.6
+	spread = 14
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	suppressor_x_offset = 6
 

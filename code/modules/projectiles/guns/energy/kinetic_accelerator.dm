@@ -20,7 +20,7 @@
 	var/unique_frequency = FALSE // modified by KA modkits
 	var/overheat = FALSE
 	var/mob/holder
-
+	recoil = 0.5
 
 	var/max_mod_capacity = 100
 	var/list/modkits = list()
